@@ -1,10 +1,13 @@
 'use strict';
 
 import angular from 'angular';
-// import ngAnimate from 'angular-animate';
+import ngAnimate from 'angular-animate';
 import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
+import ngMaterial from 'angular-material';
+import ngMessages from 'angular-messages';
+import ngAria from 'angular-aria';
 
 import uiRouter from 'angular-ui-router';
 
@@ -25,8 +28,8 @@ import util from '../components/util/util.module';
 
 import './app.scss';
 
-angular.module('ufacmXyzV2App', [ngCookies, ngResource, ngSanitize, uiRouter, _Auth, account, admin,
-  'validation.match', navbar, footer, main, constants, util
+angular.module('ufacmXyzV2App', [ngAria, ngAnimate, ngCookies, ngResource, ngSanitize, ngMessages, ngMaterial,
+  uiRouter, _Auth, account, admin, 'validation.match', navbar, footer, main, constants, util
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
